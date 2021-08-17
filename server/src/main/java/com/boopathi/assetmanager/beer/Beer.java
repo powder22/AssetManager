@@ -1,4 +1,4 @@
-package com.okta.developer.demo.beer;
+package com.boopathi.assetmanager.beer;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
