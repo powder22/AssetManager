@@ -1,3 +1,6 @@
+#Asset Manager
+  A simple app to track and maintain assets.
+
 To run the server, cd into the `server` folder and run:
  
 ```bash
