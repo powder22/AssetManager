@@ -71,6 +71,12 @@ const config = {
 };
 ```
 
+### To enable debug
+    * Click maven on the right side
+    * Under plugins, you will find spring boot
+    * Edit the run configuration of spring-boot:run, and replace the command line arguments with `spring-boot:run -Dspring-boot.run.fork=false`
+
+
 ## Links
 
 This example uses the following libraries provided by Okta:
