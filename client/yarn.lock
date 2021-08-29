@@ -220,6 +220,13 @@
   dependencies:
     tslib "^2.2.0"
 
+"@angular/material@^12.2.3":
+  version "12.2.3"
+  resolved "https://registry.npmjs.org/@angular/material/-/material-12.2.3.tgz"
+  integrity sha512-kwCTYPckOsrLU9ukM9c3E4EnJJu6PMEymn/Xb6QKAo+0qwaV527QrWl6EW1IgcDpUvEB5UNbxXTU32wa+LhtVA==
+  dependencies:
+    tslib "^2.2.0"
+
 "@angular/platform-browser-dynamic@~12.2.0":
   version "12.2.2"
   resolved "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-12.2.2.tgz"
