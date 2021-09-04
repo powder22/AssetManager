@@ -5,25 +5,28 @@ import com.boopathi.assetmanager.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController("/users")
+@Controller()
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping("/users")
     public ResponseEntity<JsonNode> getAll() throws JsonProcessingException {
         return ResponseEntity.ok(new ObjectMapper().readTree(userService.getList().toString()));
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<JsonNode> get(@PathVariable Long id) throws JsonProcessingException {
+    @GetMapping("/users/{id}")
+    public ResponseEntity<JsonNode> get(@PathVariable Long id) throws JsonProcessingException, JSONException {
         try {
             return ResponseEntity.ok(new ObjectMapper().readTree(userService.get(id).toString()));
         }
@@ -32,20 +35,20 @@ public class UserController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/users")
     public ResponseEntity<JsonNode> add(@RequestBody User user) throws JsonProcessingException {
         User resultUser = userService.add(user);
         return ResponseEntity.ok(new ObjectMapper().readTree(resultUser.toString()));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/users/{id}")
     public ResponseEntity<JsonNode> update(@RequestBody User user, @PathVariable Long id) throws JsonProcessingException {
         user.setId(id);
         User resultUser = userService.add(user);
         return ResponseEntity.ok(new ObjectMapper().readTree(resultUser.toString()));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/users/{id}")
     public ResponseEntity<Object> delete(@PathVariable Long id){
         userService.delete(id);
         return ResponseEntity.ok(HttpStatus.OK);
