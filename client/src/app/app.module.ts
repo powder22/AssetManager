@@ -12,8 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MembersListComponent } from './members-list/members-list.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import {MatTableModule} from '@angular/material/table';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,9 +30,12 @@ import {MatTableModule} from '@angular/material/table';
     MatSliderModule,
     MatToolbarModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

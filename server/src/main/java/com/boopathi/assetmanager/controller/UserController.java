@@ -13,11 +13,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.logging.Logger;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController("/users")
 @Controller()
 public class UserController {
-
+    //Logger logger = new Logger(this.getClass(),"");
     @Autowired
     private UserService userService;
 
