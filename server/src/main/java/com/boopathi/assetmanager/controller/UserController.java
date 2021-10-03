@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 public class UserController {
     //TODO implement logging
     //Logger logger = new Logger(this.getClass(),"");
+
     @Autowired
     private UserService userService;
 
