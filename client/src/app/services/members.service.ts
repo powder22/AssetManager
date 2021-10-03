@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class MembersService {
 
-  private _url: string = 'http://localhost:8080/api/v1/users'
+  private _url: string = 'http://localhost:8081/api/v1/users'
 
   constructor(private http:HttpClient) { }
 
