@@ -1,14 +1,14 @@
 window.am.wsm = {
     stompClient : null,
     connect : function() {
-        var socket = new SockJS(am.serverUtils.getServerUrl()+'/gs-guide-websocket');
+        var socket = new SockJS(am.serverUtils.getServerUrl()+'/assetManagerWEBClient');
         this.stompClient = Stomp.over(socket);
         this.stompClient.connect({}, function (frame) {
             console.log('Connected: ' + frame);
             am.wsm.stompClient.subscribe('/topic/greetings', function (greeting) {
                 $( "#WSdialog" ).text(JSON.parse(greeting.body).content);
                 $( "#WSdialog" ).dialog( "open" );
-                $( "[aria-describedby='WSdialog']" ).css('top','765px');
+                $( "[aria-describedby='WSdialog']" ).css('top','810');
                 $( "[aria-describedby='WSdialog']" ).css('left','5px');
                 console.log(JSON.parse(greeting.body).content);
             });
