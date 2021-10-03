@@ -1,3 +1,6 @@
+<script>
+  var am = {};
+</script>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,8 +12,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="./assets/webSockets/sockjs.min.js"></script>
+  <script src="./assets/webSockets/stomp.min.js"></script>
+  <script src="./assets/jquery/jquery.min.js"></script>
+  <script src="./assets/webSockets/webSocket.service.js"></script>
+  <script src="./assets/jquery/jquery-ui.js"></script>
+  <script src="./assets/utils/serverutils.js"></script>
+  <link rel="stylesheet" href="./assets/jquery/jquery-ui.css">
+
 </head>
 <body class="mat-typography">
   <app-root></app-root>
-</body>
+  
+  <!-- web socket messaging element -->
+  <div id="WSdialog" title="New Activity"></div>
+   <!-- end -->
 </html>
